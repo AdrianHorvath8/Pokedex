@@ -135,5 +135,3 @@ docker-compose exec web python manage.py test
 - You can explore all API endpoints through Django REST Framework's intuitive browsable interface, which provides instant documentation and testing capabilities for the robust backend services I've built.
 - Dockerized workflow is the recommended path for a clean start.
 
-
-curl -X POST "http://localhost:8000/api/pokedex/team-synergy/" -H "Content-Type: application/json" -d '{"pokemons": ["meowth", "vaporeon", "abra", "pikachu", "psyduck", "golduck"]}
