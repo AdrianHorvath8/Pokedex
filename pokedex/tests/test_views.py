@@ -172,12 +172,12 @@ class PokemonDetailViewTests(PokedexBaseTestCase):
         self.assertIsNotNone(response.data["stats"])
 
 
-class TeamSynergyViewTests(PokedexBaseTestCase):
+class PokemonTeamSynergyViewTests(PokedexBaseTestCase):
     """Test the team synergy analysis view"""
 
     def test_team_synergy_analysis(self):
         """Test team synergy analysis with valid Pokémon"""
-        url = reverse("team-synergy")
+        url = reverse("pokemon-team-synergy")
         data = {
             "pokemons": [
                 self.charizard.id,
@@ -199,10 +199,9 @@ class TeamSynergyViewTests(PokedexBaseTestCase):
         self.assertIn("safe_matchups", response.data)
         self.assertEqual(len(response.data["team"]), 6)
 
-
     def test_team_synergy_with_names(self):
         """Test team synergy analysis with Pokémon names"""
-        url = reverse("team-synergy")
+        url = reverse("pokemon-team-synergy")
         data = {
             "pokemons": [
                 "charizard",
@@ -219,10 +218,9 @@ class TeamSynergyViewTests(PokedexBaseTestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data["team"]), 6)
 
-
     def test_team_synergy_missing_pokemon(self):
         """Test team synergy analysis with missing Pokémon"""
-        url = reverse("team-synergy")
+        url = reverse("pokemon-team-synergy")
         data = {"pokemons": [999]}  # Non-existent ID
 
         response = self.client.post(url, data, format="json")
@@ -230,10 +228,9 @@ class TeamSynergyViewTests(PokedexBaseTestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn("error", response.data)
 
-
     def test_team_synergy_wrong_count(self):
         """Test team synergy analysis with wrong number of Pokémon"""
-        url = reverse("team-synergy")
+        url = reverse("pokemon-team-synergy")
         data = {"pokemons": [self.charizard.id]}  # Only 1 Pokémon
 
         response = self.client.post(url, data, format="json")
@@ -241,10 +238,9 @@ class TeamSynergyViewTests(PokedexBaseTestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn("error", response.data)
 
-
     def test_team_synergy_empty_request(self):
         """Test team synergy analysis with empty request"""
-        url = reverse("team-synergy")
+        url = reverse("pokemon-team-synergy")
         data = {"pokemons": []}
 
         response = self.client.post(url, data, format="json")

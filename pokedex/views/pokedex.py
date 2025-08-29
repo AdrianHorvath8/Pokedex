@@ -28,7 +28,7 @@ class PokemonDetailView(generics.RetrieveAPIView):
     serializer_class = PokemonDetailSerializer
 
 
-class TeamSynergyView(APIView):
+class PokemonTeamSynergyView(APIView):
     """API endpoint for analyzing Pokémon team synergy."""
 
     def _get_pokemon_objects(self, pokemons: List[Union[int, str]]) -> List[Pokemon]:
