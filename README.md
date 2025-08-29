@@ -124,7 +124,7 @@ python manage.py populate_pokedex
 
 Run tests:
 ```bash
-python manage.py test
+docker-compose exec web python manage.py test
 ```
 
 ---
@@ -132,7 +132,8 @@ python manage.py test
 ## Submission & Notes
 
 - Make sure to run the population command before exploring the API.
+- You can explore all API endpoints through Django REST Framework's intuitive browsable interface, which provides instant documentation and testing capabilities for the robust backend services I've built.
 - Dockerized workflow is the recommended path for a clean start.
-- This implementation focuses on correctness, clarity, and service-layer separation over UI complexity.
 
 
+curl -X POST "http://localhost:8000/api/pokedex/team-synergy/" -H "Content-Type: application/json" -d '{"pokemons": ["meowth", "vaporeon", "abra", "pikachu", "psyduck", "golduck"]}
