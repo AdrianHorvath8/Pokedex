@@ -64,6 +64,8 @@ Example:
 ```bash
 curl "http://localhost:8000/api/pokedex/25/"
 
+```
+
 ### 3) Team Synergy Analysis
 - **POST** `/api/pokedex/team-synergy/`
 - Body: provide exactly 6 Pokémon (IDs or names)
