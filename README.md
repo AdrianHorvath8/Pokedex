@@ -26,7 +26,7 @@ Django REST API that integrates with the public PokeAPI to deliver a practical P
 docker-compose up --build
 ```
 
-2) Populate the local database with Pokémon and type data (required for endpoints to be useful):
+2) Populate the local database with Pokémon data (required for endpoints to be useful):
 
 ```bash
 docker-compose exec web python manage.py populate_pokedex
@@ -104,7 +104,7 @@ It persists:
 
 Command to run:
 ```bash
-python manage.py populate_pokedex
+docker-compose exec web python manage.py populate_pokedex
 ```
 
 ---
@@ -131,7 +131,6 @@ docker-compose exec web python manage.py test
 
 ## Submission & Notes
 
-- You do not need any ENV variables to be able to run this API.
 - Make sure to run the population command before exploring the API.
 - You can explore all API endpoints through Django REST Framework's intuitive browsable interface, which provides instant documentation and testing capabilities for the robust backend services I've built.
 - Dockerized workflow is the recommended path for a clean start.
