@@ -20,13 +20,19 @@ Django REST API that integrates with the public PokeAPI to deliver a practical P
 
 ## Quick Start (Docker)
 
-1) Build and run the app:
+1) Clone the repo and move to the root directory:
+
+```bash
+git clone https://github.com/AdrianHorvath8/Pokedex.git
+```
+
+2) Build and run the app:
 
 ```bash
 docker-compose up --build
 ```
 
-2) Populate the local database with Pokémon data (required for endpoints to be useful):
+3) Populate the local database with Pokémon data (required for endpoints to be useful):
 
 ```bash
 docker-compose exec web python manage.py populate_pokedex
