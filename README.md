@@ -8,7 +8,7 @@ Django REST API that integrates with the public PokeAPI to deliver a practical P
 - A head-to-head Pokémon comparison endpoint
 - Dockerized development workflow
 
-This project demonstrates clean Django/DRF architecture, sound use of the ORM, and thoughtful service-layer design for domain logic.
+`For demonstration purposes, this project uses simplified configuration without environment variables for the SECRET_KEY and other settings, prioritizing ease of setup over production-grade security measures.`
 
 ### Tech Stack
 - **Backend**: Django 5, Django REST Framework, django-filter
@@ -131,6 +131,7 @@ docker-compose exec web python manage.py test
 
 ## Submission & Notes
 
+- You do not need any ENV variables to be able to run this API.
 - Make sure to run the population command before exploring the API.
 - You can explore all API endpoints through Django REST Framework's intuitive browsable interface, which provides instant documentation and testing capabilities for the robust backend services I've built.
 - Dockerized workflow is the recommended path for a clean start.
