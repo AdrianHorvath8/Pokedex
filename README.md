@@ -8,7 +8,7 @@ Django REST API that integrates with the public PokeAPI to deliver a practical P
 - A head-to-head Pokémon comparison endpoint
 - Dockerized development workflow
 
-`For demonstration purposes, this project uses simplified configuration without environment variables for the SECRET_KEY and other settings, prioritizing ease of setup over production-grade security measures.`
+### For demonstration purposes, this project uses simplified configuration without environment variables for the SECRET_KEY and other settings, prioritizing ease of setup over production-grade security measures.
 
 ### Tech Stack
 - **Backend**: Django 5, Django REST Framework, django-filter
