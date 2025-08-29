@@ -36,7 +36,7 @@ The API will be available at `http://localhost:8000/`.
 
 ---
 
-## API Overview
+## API Documentation
 
 Base path: `http://localhost:8000/api/pokedex/`
 
@@ -62,7 +62,7 @@ curl "http://localhost:8000/api/pokedex/?abilities=65"
 
 Example:
 ```bash
-curl "http://localhost:8000/api/pokedex/25/"
+curl "http://localhost:8000/api/pokedex/60/"
 
 ```
 
@@ -75,7 +75,7 @@ Example:
 curl -X POST "http://localhost:8000/api/pokedex/team-synergy/" \
   -H "Content-Type: application/json" \
   -d '{
-    "pokemons": ["charizard", "venusaur", "blastoise", "pikachu", "alakazam", "snorlax"]
+    "pokemons": ["meowth", "vaporeon", "abra", "pikachu", "psyduck", "golduck"]
   }'
 ```
 
