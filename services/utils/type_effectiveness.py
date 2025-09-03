@@ -1,7 +1,5 @@
 from typing import Dict, List, Set
 
-from django.db.models import Prefetch
-
 from pokedex.models import PokemonType
 
 

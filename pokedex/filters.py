@@ -1,5 +1,6 @@
-from django_filters import FilterSet, CharFilter, ModelMultipleChoiceFilter
-from pokedex.models import Pokemon, PokemonType, Ability
+from django_filters import CharFilter, FilterSet, ModelMultipleChoiceFilter
+
+from pokedex.models import Ability, Pokemon, PokemonType
 
 
 class PokedexFilter(FilterSet):

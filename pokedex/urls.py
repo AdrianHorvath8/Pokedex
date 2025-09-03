@@ -1,11 +1,12 @@
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+
 from pokedex.views.pokedex import (
     PokedexView,
+    PokemonComparisonView,
     PokemonDetailView,
     PokemonTeamSynergyView,
-    PokemonComparisonView,
 )
 
 urlpatterns = [

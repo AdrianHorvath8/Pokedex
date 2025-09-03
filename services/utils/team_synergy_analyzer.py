@@ -1,9 +1,7 @@
 from collections import defaultdict
 from typing import Dict, List, Set, Tuple
 
-from django.db.models import Prefetch
-
-from pokedex.models import Pokemon, PokemonType
+from pokedex.models import Pokemon
 
 from .type_effectiveness import TypeEffectivenessService
 

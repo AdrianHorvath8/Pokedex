@@ -1,5 +1,6 @@
 from django.test import TestCase
-from pokedex.models import Pokemon, PokemonType, Ability, PokemonStats
+
+from pokedex.models import Ability, Pokemon, PokemonStats, PokemonType
 
 
 class PokemonModelTests(TestCase):

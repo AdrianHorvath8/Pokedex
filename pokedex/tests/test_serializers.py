@@ -1,12 +1,13 @@
 from django.test import TestCase
-from pokedex.models import Pokemon, PokemonType, Ability, PokemonStats
+
+from pokedex.models import Ability, Pokemon, PokemonStats, PokemonType
 from pokedex.serializers import (
-    PokemonListSerializer,
+    AbilitySerializer,
     PokemonDetailSerializer,
+    PokemonListSerializer,
+    PokemonStatsSerializer,
     PokemonTeamSynergySerializer,
     TypeSerializer,
-    AbilitySerializer,
-    PokemonStatsSerializer,
 )
 
 

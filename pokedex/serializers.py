@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from pokedex.models import Pokemon, PokemonType, Ability, PokemonStats
+
+from pokedex.models import Ability, Pokemon, PokemonStats, PokemonType
 
 
 class TypeSerializer(serializers.ModelSerializer):
